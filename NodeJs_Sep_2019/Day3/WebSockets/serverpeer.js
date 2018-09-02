@@ -23,7 +23,7 @@ io.sockets.on('connection',(skt)=>{
         let dataToBeSent = new Date();
         console.log('Emitting data for client');
         skt.emit('messageForClient',dataToBeSent)
-    },2000);
+    },10000);
     skt.on('messageFromClient',(dataFromClient)=>{
         console.log('Data Received : '+ dataFromClient);
     });
