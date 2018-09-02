@@ -74,4 +74,16 @@ http built-in module to create server
     Jasmine 
     Test Runner -> Karma  
 
+**Authentication**
+
+    Passport.js   
+
+**Microservices**
+
+    Write microservices 
+    Docker (VM enviornment) 
+    Deploy microservices in docker 
+    Write an API Gateway (load balancer) - nginx  
+    Access the microservice.  
+
  
