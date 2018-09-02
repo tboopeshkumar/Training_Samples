@@ -35,3 +35,27 @@ http built-in module to create server
     Cookies/Sessions 
 
     View Engines. 
+
+**Streams** 
+
+    Reading – *flowing* (data events will be emitted) 
+
+    Paused – *non-flowing* (no event will be emitted) 
+
+    Default format is bytes 
+
+    Readable or Writable Streams :  
+
+        FileStream 
+
+        Network Stream 
+
+        Buffer Stream 
+
+    Readable and Writeable stream.  
+
+        Duplex Stream ( TCP, WebSockets ) 
+
+Web Sockets 
+
+ 
