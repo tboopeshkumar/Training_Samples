@@ -18,7 +18,7 @@ const handleOnMessage = (message) =>{
                 return;
             }
             try{
-                if(!res.intent || !res.intent[0] || res.intent[0].value){
+                if(!res.intent || !res.intent[0] || !res.intent[0].value){
                     throw new Error('Could not extract intent');
                 }
                 const intent = require('./intents/'+res.intent[0].value+'intent');
@@ -34,17 +34,17 @@ const handleOnMessage = (message) =>{
                 console.log(res);
                 rtm.sendMessage('Sorry. I dont know what you are talking about',message.channel);
             }
-            if(!res.intent)
-            {
-                return rtm.sendMessage('Sorry I did not understand...', message.channel);
-            }
-            else if(res.intent[0].value== 'time' && res.location){
-                return rtm.sendMessage(`I dont yet know the time in ${res.location[0].value}`, message.channel);
-            }
-            else{
-                console.log(res);
-                return rtm.sendMessage(`Sorry, I dont know what you are talking about`,message.channel);
-            }
+            // if(!res.intent)
+            // {
+            //     return rtm.sendMessage('Sorry I did not understand...', message.channel);
+            // }
+            // else if(res.intent[0].value== 'time' && res.location){
+            //     return rtm.sendMessage(`I dont yet know the time in ${res.location[0].value}`, message.channel);
+            // }
+            // else{
+            //     console.log(res);
+            //     return rtm.sendMessage(`Sorry, I dont know what you are talking about`,message.channel);
+            // }
             
         });
     }
