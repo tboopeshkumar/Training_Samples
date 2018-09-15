@@ -6,6 +6,7 @@ const CLIENT_EVENTS = { RTM :{
 };
 let rtm=null;
 let nlp = null;
+let registry = null;
 const handleOnAuthenticated = (rtmStartData)=> {
     console.log(`logged in as ${rtmStartData.self.name} of team ${rtmStartData.team.name}, but not yet connected to channel`)
 };
@@ -22,7 +23,7 @@ const handleOnMessage = (message) =>{
                     throw new Error('Could not extract intent');
                 }
                 const intent = require('./intents/'+res.intent[0].value+'intent');
-                intent.process(res,(err,response)=>{
+                intent.process(res,registry,(err,response)=>{
                     if(err){
                         console.log(err.message);
                         return;
@@ -54,9 +55,10 @@ const addAuthenticatedHandler = (rtm,handler)=>{
     rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED,handler);
 }
 
-module.exports.init = (token,logLevel,nlpClient)=>{
+module.exports.init = (token,logLevel,nlpClient,serviceRegistry)=>{
 rtm = new RTMClient(token,{logLevel:logLevel});
 nlp = nlpClient;
+registry = serviceRegistry;
 addAuthenticatedHandler(rtm,handleOnAuthenticated);
 rtm.on(CLIENT_EVENTS.RTM.MESSAGE,handleOnMessage);
 return rtm;
