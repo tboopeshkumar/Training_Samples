@@ -1,4 +1,4 @@
-import { handleAction } from "redux-actions";
+import { handleActions } from "redux-actions";
 import { SELECT_MOVIE } from "../constants/actionTypes";
 
 export default handleActions(
