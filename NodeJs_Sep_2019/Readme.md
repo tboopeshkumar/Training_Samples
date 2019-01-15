@@ -56,6 +56,34 @@ http built-in module to create server
 
         Duplex Stream ( TCP, WebSockets ) 
 
-Web Sockets 
+**Web Sockets**
+
+**Node JS Tooling**  
+
+    Gulp 
+    Define tasks 
+    Gulpfile.js (configurations)
+    Run task using (Gulp) 
+    Grunt 
+    Webpack 
+
+**Unit Testing**
+
+    BDD/TDD  (Test first -> App -> make test cases successs) 
+    Test Suites -> Collection of test cases  
+    Jasmine 
+    Test Runner -> Karma  
+
+**Authentication**
+
+    Passport.js   
+
+**Microservices**
+
+    Write microservices 
+    Docker (VM enviornment) 
+    Deploy microservices in docker 
+    Write an API Gateway (load balancer) - nginx  
+    Access the microservice.  
 
  
