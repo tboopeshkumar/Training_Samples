@@ -1,24 +1,5 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "../reducers";
-import logger from "redux-logger";
-import api from "../middleware/api";
-import DevTools from "../containers/DevTools";
-import toastMiddleware from "../middleware/toasts";
-
-const configureStore = initialState => {
-    const store = createStore(
-        rootReducer,
-        initialState,
-        compose(
-            applyMiddleware(logger, toastMiddleware, api),
-            DevTools.instrument()
-        ));
-    if (module.hot) {
-        module.hot.accept("../reducers", () => {
-            store.replaceReducer(rootReducer);
-        })
-    }
-    return store;
-};
-
-export default configureStore;
+if (process.env.NODE_ENV === "production") {   
+    module.exports = require("./configureStore.prod"); 
+} else {   
+    module.exports = require("./configureStore.dev"); 
+}   

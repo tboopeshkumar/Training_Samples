@@ -1,12 +1,16 @@
 import { createAction } from "redux-actions";
 import { apiPayloadCreator } from "../utils/appUtils";
-import { API,SET_MOVIES } from "../constants/actionTypes";
+import { API,SET_MOVIES, GET_MOVIES, SELECT_MOVIE } from "../constants/actionTypes";
 import { normalize, schema } from "normalizr";
 
 const getMoviesAC = createAction(API, apiPayloadCreator);
+export const selectMovie  = createAction(SELECT_MOVIE);
 
 export const getMovies = () =>
-    getMoviesAC({ url : "/vcvx0", onSuccess : setMovies});
+    getMoviesAC({ 
+        url : "/vcvx0", 
+        onSuccess : setMovies,
+        label : GET_MOVIES});
 
 
 function setMovies(movies){

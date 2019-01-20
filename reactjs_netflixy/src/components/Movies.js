@@ -8,9 +8,11 @@ import StyledHorizontalScroll from "../styled/StyledHorizontalScroll";
 import StyledFooter from "../styled/StyledFooter";
 import StyledLargeBtn from "../styled/StyledLargeBtn";
 import HelpMenuContainer from "../containers/HelpMenuContainer";
+import StyledLoader from "../styled/StyledLoader";
+import StyledMovieLink from "../styled/StyledMovieLink";
 
 class Movies extends Component {
-    componentDidMount(){
+    componentDidMount() {
 
         this.props.getMovies();
     }
@@ -20,22 +22,26 @@ class Movies extends Component {
         return (
             <Fragment>
                 <StyledHeader>
-                    <HelpMenuContainer/>
+                    <HelpMenuContainer />
                     <StyledHeaderTitle>The Movie Recommender</StyledHeaderTitle>
                     <FontAwesomeIcon icon="search" />
                 </StyledHeader>
                 {/* the list of movies */}
                 <StyledHorizontalScroll>
-                    {this.props.movies.map(movie => (
-                        <Movie key={movie.id}
-                            name={movie.name}
-                            poster={movie.poster}
-                            duration={movie.duration}
-                            year={movie.year}>
+                    {this.props.loading
+                        ? <StyledLoader />
+                        : this.props.movies.map(movie => (
+                            <StyledMovieLink href={`/movies/${movie.id}`} key={movie.id}>
+                                <Movie
+                                    name={movie.name}
+                                    poster={movie.poster}
+                                    duration={movie.duration}
+                                    year={movie.year}>
 
-                        </Movie>
+                                </Movie>
+                            </StyledMovieLink>
 
-                    ))}
+                        ))}
                 </StyledHorizontalScroll>
                 <StyledFooter>
                     <StyledLargeBtn>Get Recommended Movies</StyledLargeBtn>
