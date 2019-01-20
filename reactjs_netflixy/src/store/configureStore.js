@@ -3,13 +3,14 @@ import rootReducer from "../reducers";
 import logger from "redux-logger";
 import api from "../middleware/api";
 import DevTools from "../containers/DevTools";
+import toastMiddleware from "../middleware/toasts";
 
 const configureStore = initialState => {
     const store = createStore(
         rootReducer,
         initialState,
         compose(
-            applyMiddleware(logger, api),
+            applyMiddleware(logger, toastMiddleware, api),
             DevTools.instrument()
         ));
     if (module.hot) {
