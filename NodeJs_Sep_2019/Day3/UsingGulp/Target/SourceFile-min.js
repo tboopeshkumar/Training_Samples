@@ -1,1 +1,0 @@
-let x=1e3,boolvar=!1;function Addition(n,o){return n+o}
