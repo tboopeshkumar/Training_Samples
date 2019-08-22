@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cce8147.chunk.css",
-    "main.js": "/static/js/main.540ea920.chunk.js",
-    "main.js.map": "/static/js/main.540ea920.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.aad2beca.js",
-    "runtime~main.js.map": "/static/js/runtime~main.aad2beca.js.map",
-    "static/js/2.9d9a4fbc.chunk.js": "/static/js/2.9d9a4fbc.chunk.js",
-    "static/js/2.9d9a4fbc.chunk.js.map": "/static/js/2.9d9a4fbc.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c3a332af0f83e560844985f78dca503f.js": "/precache-manifest.c3a332af0f83e560844985f78dca503f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/css/main.8b6455ab.chunk.css",
+    "main.js": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/main.7b8fae64.chunk.js",
+    "main.js.map": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/main.7b8fae64.chunk.js.map",
+    "runtime~main.js": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/runtime~main.2837a61f.js",
+    "runtime~main.js.map": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/runtime~main.2837a61f.js.map",
+    "static/js/2.4ea1ec15.chunk.js": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/2.4ea1ec15.chunk.js",
+    "static/js/2.4ea1ec15.chunk.js.map": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/js/2.4ea1ec15.chunk.js.map",
+    "index.html": "/Training_Samples/Udemy_React_2019/monsters-rolodex/index.html",
+    "precache-manifest.018cca810869ba0c56c1e1be29d5aedb.js": "/Training_Samples/Udemy_React_2019/monsters-rolodex/precache-manifest.018cca810869ba0c56c1e1be29d5aedb.js",
+    "service-worker.js": "/Training_Samples/Udemy_React_2019/monsters-rolodex/service-worker.js",
+    "static/css/main.8b6455ab.chunk.css.map": "/Training_Samples/Udemy_React_2019/monsters-rolodex/static/css/main.8b6455ab.chunk.css.map"
   }
 }
